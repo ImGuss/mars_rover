@@ -151,13 +151,19 @@ function roverMover(array) {
   });
 }
 
+var dirReceiver = prompt("Give me a string with directions. 'l' or 'r' to rotate the rover and 'f' or 'b' to move the rover.");
+
+var dirRecArray = dirReceiver.split("");
+
+roverMover(dirRecArray);
+
 // TESTS. Must be run individually
 
-//roverMover(["l", "f", "f", "f", "l", "b", "b"]);
+// "lffflbb"
 //console.log(rover.position); // Coords should be (-3, 2)
 
-//roverMover(["l", "f", "r", "f", "f", "f", "f", "f", "f"]);
+// "lfrffffff"
 //console.log(rover.position); // Coords should be (-1,-5)
 
-//roverMover(["r", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"]);
+// "rbbbbbbbbbbb"
 //console.log(rover.position); // Coords should be (0,0)
